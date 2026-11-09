@@ -1,0 +1,1 @@
+These assemblies were produced by direct SDK Roslyn compilation, including Razor views in RaceDayMVC.dll. They are compilation evidence, not a self-contained publish folder. Open ../RaceDay.sln and run the normal NuGet-restored build for execution on your computer. See ../BUILD-REPORT.md.

@@ -1,0 +1,76 @@
+
+
+
+<link href="~/css/site.css" rel="stylesheet" />
+
+<section>
+    <nav class="navbar navbar-expand-lg navbar-dark raceday-navbar">
+        <div class="container">
+
+            <!-- BRAND -->
+            <a class="navbar-brand fw-bold" href="@Url.Action("Index", "Home")">
+                <span class="brand-race">RACE</span><span class="brand-day">DAY</span>
+                <span class="brand-tagline">SPORTS & EVENTS</span>
+            </a>
+
+            <!-- MOBILE BUTTON -->
+            <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#racedayNavbar"
+                    aria-controls="racedayNavbar"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- NAVIGATION LINKS -->
+            <div class="collapse navbar-collapse" id="racedayNavbar">
+
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+@if(User.Identity?.IsAuthenticated==true){<li class="nav-item"><a class="nav-link" asp-controller="@(User.IsInRole("Organiser")?"Organiser":"Participant")" asp-action="Dashboard">My dashboard</a></li>}
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("Index", "Home")">
+                            Home
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("About", "Home")">
+                            About
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("Events", "Home")">
+                            Events
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("Contact", "Home")">
+                            Contact
+                        </a>
+                    </li>
+
+                    <li class="nav-item ms-lg-3">
+                        <a class="nav-link login-link"
+                           href="@Url.Action("Login", "Home")">
+                            Login
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="btn btn-raceday"
+                           href="@Url.Action("Register", "Home")">
+                            Register Now <span>→</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</section>

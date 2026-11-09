@@ -1,0 +1,17 @@
+[
+  {
+    "Name": "RaceDay MVC + API",
+    "Projects": [
+      {
+        "Path": "RaceDayApi\\RaceDayApi.csproj",
+        "Action": "Start",
+        "DebugTarget": "https"
+      },
+      {
+        "Path": "RaceDayMVC\\RaceDayMVC.csproj",
+        "Action": "Start",
+        "DebugTarget": "https"
+      }
+    ]
+  }
+]

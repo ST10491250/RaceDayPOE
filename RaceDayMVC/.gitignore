@@ -1,0 +1,9 @@
+bin/
+obj/
+.vs/
+wwwroot/uploads/banners/*
+!wwwroot/uploads/banners/.gitkeep
+wwwroot/uploads/profiles/*
+!wwwroot/uploads/profiles/.gitkeep
+App_Data/image-references/**
+!App_Data/image-references/.gitkeep

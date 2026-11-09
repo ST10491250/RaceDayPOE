@@ -1,0 +1,2 @@
+@model List<RaceDayMVC.Models.ResultDto>
+@{ViewData["Title"]="Race results";}<h1>Race results</h1><partial name="_EventSelector" /><partial name="_ResultsTable" model="Model" />@if((int)ViewBag.EventId!=0){<a asp-action="Enrolments" asp-route-id="@ViewBag.EventId" class="btn btn-primary">Capture results from enrolments</a>}

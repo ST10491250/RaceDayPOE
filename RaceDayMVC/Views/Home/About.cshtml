@@ -1,0 +1,213 @@
+﻿@{
+    ViewData["Title"] = "About Us";
+}
+
+@Html.Partial("_navigations")
+
+<!-- PAGE HEADER -->
+<section class="page-header">
+    <div class="container">
+        <span class="section-label">GET TO KNOW US</span>
+        <h1>About <span>RaceDay</span></h1>
+        <p>Bringing people together through sports, competition and unforgettable experiences.</p>
+    </div>
+</section>
+
+<!-- ABOUT CONTENT -->
+<section class="about-section">
+    <div class="container">
+        <div class="row align-items-center g-5">
+
+            <div class="col-lg-7">
+                <span class="section-label">WHO WE ARE</span>
+                <h2 class="section-title">
+                    More Than Just a <span>Race.</span>
+                </h2>
+
+                <p>
+                    RaceDay is a sports and events platform dedicated to
+                    connecting athletes, sports enthusiasts and communities
+                    through exciting sporting competitions and events.
+                </p>
+
+                <p>
+                    We believe that sports create opportunities for people
+                    to challenge themselves, develop their abilities,
+                    build friendships and achieve their personal goals.
+                </p>
+
+                <p>
+                    Whether you are an experienced athlete or participating
+                    in your first competition, RaceDay provides a platform
+                    where everyone can get involved and experience the
+                    excitement of sport.
+                </p>
+            </div>
+
+            <div class="col-lg-5">
+                <div class="about-info-card">
+                    <h3>Our Purpose</h3>
+                    <p>
+                        To make sporting events accessible, enjoyable
+                        and easier to participate in.
+                    </p>
+
+                    <hr />
+
+                    <h3>Our Vision</h3>
+                    <p>
+                        To build a connected sporting community where
+                        passion, participation and performance come together.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- OUR VALUES -->
+<section class="features-section">
+    <div class="container">
+
+        <div class="text-center mb-5">
+            <span class="section-label">WHAT DRIVES US</span>
+            <h2 class="section-title">Our Core <span>Values</span></h2>
+            <p class="section-description">
+                The principles that shape every RaceDay experience.
+            </p>
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="bi bi-trophy-fill"></i>
+                    </div>
+                    <h4>Excellence</h4>
+                    <p>
+                        We encourage participants to give their best
+                        and continuously challenge themselves.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="bi bi-people-fill"></i>
+                    </div>
+                    <h4>Community</h4>
+                    <p>
+                        We bring people together through shared
+                        sporting experiences and teamwork.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="bi bi-heart-fill"></i>
+                    </div>
+                    <h4>Sportsmanship</h4>
+                    <p>
+                        We promote respect, fairness, discipline
+                        and positive competition.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- WHAT WE OFFER -->
+<section class="how-section">
+    <div class="container text-center">
+
+        <span class="section-label">BE PART OF THE ACTION</span>
+        <h2 class="section-title">
+            Experience <span>RaceDay</span>
+        </h2>
+
+        <p class="section-description mb-4">
+            Explore sporting events, register for competitions
+            and become part of a community that celebrates sport.
+        </p>
+
+        <a href="@Url.Action("Events", "Home")"
+           class="btn btn-raceday me-2">
+            Explore Events →
+        </a>
+
+        <a href="@Url.Action("Register", "Home")"
+           class="btn btn-outline-dark">
+            Join RaceDay
+        </a>
+
+    </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="raceday-footer">
+    <div class="container">
+
+        <div class="row g-4">
+
+            <div class="col-lg-5">
+
+                <h3 class="footer-brand">
+                    RACE<span>DAY</span>
+                </h3>
+
+                <p>
+                    Bringing people together through sports,
+                    competitions and unforgettable events.
+                </p>
+
+            </div>
+
+            <div class="col-md-4 col-lg-3">
+
+                <h5>Quick Links</h5>
+
+                <ul>
+                    <li><a href="@Url.Action("Index", "Home")">Home</a></li>
+                    <li><a href="@Url.Action("About", "Home")">About Us</a></li>
+                    <li><a href="@Url.Action("Events", "Home")">Previous Events</a></li>
+                    <li><a href="@Url.Action("Contact", "Home")">Contact</a></li>
+                </ul>
+
+            </div>
+
+            <div class="col-md-8 col-lg-4">
+
+                <h5>Get Started</h5>
+
+                <p>
+                    Ready to participate in your next sporting event?
+                </p>
+
+                <a href="@Url.Action("Register", "Home")"
+                   class="btn btn-raceday">
+                    Register Now →
+                </a>
+
+            </div>
+
+        </div>
+
+        <hr />
+
+        <div class="footer-bottom">
+            <p>
+                &copy; @DateTime.Now.Year RaceDay.
+                All Rights Reserved.
+            </p>
+        </div>
+
+    </div>
+</footer>

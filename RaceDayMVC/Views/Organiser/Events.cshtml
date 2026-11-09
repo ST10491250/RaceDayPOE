@@ -1,0 +1,2 @@
+@model List<RaceDayMVC.Models.EventDto>
+@{ViewData["Title"]="My events";}<div class="page-heading"><h1>My events</h1><a asp-action="CreateEvent" class="btn btn-primary">Create event</a></div><partial name="_EventCards" model="Model" />

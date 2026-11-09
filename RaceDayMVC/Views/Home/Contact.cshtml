@@ -1,0 +1,224 @@
+﻿@{
+    ViewData["Title"] = "Contact Us";
+}
+
+@Html.Partial("_navigations")
+
+<!-- PAGE HEADER -->
+<section class="page-header">
+    <div class="container">
+        <span class="section-label">WE WOULD LOVE TO HEAR FROM YOU</span>
+        <h1>Contact <span>Us</span></h1>
+        <p>Have a question about an event or registration? Get in touch with our team.</p>
+    </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section class="about-section">
+    <div class="container">
+
+        <div class="row g-5">
+
+            <!-- CONTACT INFORMATION -->
+            <div class="col-lg-5">
+
+                <span class="section-label">GET IN TOUCH</span>
+                <h2 class="section-title">
+                    Let's Start a <span>Conversation.</span>
+                </h2>
+
+                <p class="section-description mb-4">
+                    Whether you need assistance with registration,
+                    event information or general enquiries,
+                    we're here to help.
+                </p>
+
+                <div class="contact-info-card">
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="bi bi-envelope-fill"></i>
+                        </div>
+                        <div>
+                            <h5>Email Us</h5>
+                            <p>info@raceday.co.za</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="bi bi-telephone-fill"></i>
+                        </div>
+                        <div>
+                            <h5>Call Us</h5>
+                            <p>Contact our support team</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="bi bi-clock-fill"></i>
+                        </div>
+                        <div>
+                            <h5>Operating Hours</h5>
+                            <p>Monday - Friday</p>
+                            <p>08:00 - 17:00</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- CONTACT FORM -->
+            <div class="col-lg-7">
+
+                <div class="contact-form-card">
+
+                    <h3>Send Us a Message</h3>
+
+                    <p class="text-muted mb-4">
+                        Complete the form below and we'll get back to you.
+                    </p>
+
+                    <form asp-controller="Home"
+                          asp-action="Contact"
+                          method="post">
+
+                        @Html.AntiForgeryToken()
+
+                        <div class="row g-3">
+
+                            <div class="col-md-6">
+                                <label class="form-label">Full Name</label>
+                                <input type="text"
+                                       name="Name"
+                                       class="form-control"
+                                       placeholder="Enter your full name"
+                                       required />
+                            </div>
+
+                            <div class="col-md-6">
+                                <label class="form-label">Email Address</label>
+                                <input type="email"
+                                       name="Email"
+                                       class="form-control"
+                                       placeholder="Enter your email"
+                                       required />
+                            </div>
+
+                            <div class="col-12">
+                                <label class="form-label">Subject</label>
+                                <input type="text"
+                                       name="Subject"
+                                       class="form-control"
+                                       placeholder="What is your enquiry about?"
+                                       required />
+                            </div>
+
+                            <div class="col-12">
+                                <label class="form-label">Your Message</label>
+                                <textarea name="Message"
+                                          class="form-control"
+                                          rows="5"
+                                          placeholder="Write your message here..."
+                                          required></textarea>
+                            </div>
+
+                            <div class="col-12">
+                                <button type="submit"
+                                        class="btn btn-raceday">
+                                    Send Message →
+                                </button>
+                            </div>
+
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- BOTTOM CTA -->
+<section class="cta-section">
+    <div class="container text-center">
+
+        <h2>READY FOR YOUR NEXT <span>CHALLENGE?</span></h2>
+
+        <p>
+            Explore our events and become part of the RaceDay community.
+        </p>
+
+        <a href="@Url.Action("Events", "Home")"
+           class="btn btn-light btn-lg cta-button">
+            Explore Events →
+        </a>
+
+    </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="raceday-footer">
+    <div class="container">
+
+        <div class="row g-4">
+
+            <div class="col-lg-5">
+
+                <h3 class="footer-brand">
+                    RACE<span>DAY</span>
+                </h3>
+
+                <p>
+                    Bringing people together through sports,
+                    competitions and unforgettable events.
+                </p>
+
+            </div>
+
+            <div class="col-md-4 col-lg-3">
+
+                <h5>Quick Links</h5>
+
+                <ul>
+                    <li><a href="@Url.Action("Index", "Home")">Home</a></li>
+                    <li><a href="@Url.Action("About", "Home")">About Us</a></li>
+                    <li><a href="@Url.Action("Events", "Home")">Previous Events</a></li>
+                    <li><a href="@Url.Action("Contact", "Home")">Contact</a></li>
+                </ul>
+
+            </div>
+
+            <div class="col-md-8 col-lg-4">
+
+                <h5>Get Started</h5>
+
+                <p>
+                    Ready to participate in your next sporting event?
+                </p>
+
+                <a href="@Url.Action("Register", "Home")"
+                   class="btn btn-raceday">
+                    Register Now →
+                </a>
+
+            </div>
+
+        </div>
+
+        <hr />
+
+        <div class="footer-bottom">
+            <p>
+                &copy; @DateTime.Now.Year RaceDay.
+                All Rights Reserved.
+            </p>
+        </div>
+
+    </div>
+</footer>
+

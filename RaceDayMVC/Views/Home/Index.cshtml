@@ -1,0 +1,427 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@Html.Partial("_navigations")
+
+
+<!-- HERO SECTION -->
+<section class="race-hero">
+    <div class="hero-overlay"></div>
+
+    <div class="container hero-content">
+        <div class="row align-items-center min-vh-75">
+            <div class="col-lg-7">
+
+                <span class="hero-label">
+                    <i class="bi bi-lightning-charge-fill"></i>
+                    WELCOME TO RACEDAY
+                </span>
+
+                <h1>
+                    EVERY RACE.<br />
+                    EVERY CHALLENGE.<br />
+                    <span>YOUR MOMENT.</span>
+                </h1>
+
+                <p>
+                    Experience the excitement of sports and events.
+                    Discover upcoming competitions, register for events
+                    and become part of the RaceDay community.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="@Url.Action("Register", "Home")"
+                       class="btn btn-raceday btn-lg">
+                        Register Now →
+                    </a>
+
+                    <a href="@Url.Action("Events", "Home")"
+                       class="btn btn-outline-light btn-lg">
+                        Explore Events
+                    </a>
+                </div>
+
+                <div class="hero-highlight">
+                    <span>PASSION</span>
+                    <span>•</span>
+                    <span>PERFORMANCE</span>
+                    <span>•</span>
+                    <span>SPORTSMANSHIP</span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ABOUT RACEDAY -->
+<section class="about-section">
+    <div class="container">
+        <div class="row align-items-center g-5">
+
+            <div class="col-lg-6">
+                <div class="about-image">
+                    <img src="~/images/raceday-about.jpg"
+                         alt="Athletes competing in a sporting event"
+                         class="img-fluid" />
+
+                    <div class="about-badge">
+                        <h3>RACE</h3>
+                        <span>YOUR WAY</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+
+                <span class="section-label">WHO WE ARE</span>
+
+                <h2 class="section-title">
+                    More Than Just a <span>Race.</span>
+                </h2>
+
+                <p class="section-description">
+                    RaceDay is your destination for exciting sporting
+                    competitions and unforgettable events. We bring
+                    athletes, sports enthusiasts and communities
+                    together through the power of sport.
+                </p>
+
+                <p>
+                    Whether you are an experienced competitor or
+                    participating for the first time, RaceDay provides
+                    an opportunity to challenge yourself, connect with
+                    others and create memorable experiences.
+                </p>
+
+                <a href="@Url.Action("About", "Home")"
+                   class="btn btn-raceday mt-3">
+                    Discover RaceDay →
+                </a>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- WHY CHOOSE RACEDAY -->
+<section class="features-section">
+    <div class="container">
+
+        <div class="text-center mb-5">
+            <span class="section-label">THE RACEDAY EXPERIENCE</span>
+            <h2 class="section-title">
+                Why Choose <span>RaceDay?</span>
+            </h2>
+            <p class="section-description">
+                Everything you need to make your sporting experience
+                exciting, accessible and memorable.
+            </p>
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="bi bi-trophy-fill"></i>
+                    </div>
+
+                    <h4>Exciting Events</h4>
+
+                    <p>
+                        Discover exciting sporting events and
+                        competitions suitable for different
+                        interests and abilities.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="bi bi-person-check-fill"></i>
+                    </div>
+
+                    <h4>Easy Registration</h4>
+
+                    <p>
+                        Register for your favourite events through
+                        a simple and convenient enrolment process.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="bi bi-people-fill"></i>
+                    </div>
+
+                    <h4>Join the Community</h4>
+
+                    <p>
+                        Connect with other participants, share
+                        experiences and become part of the
+                        RaceDay sporting community.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- FEATURED EVENTS -->
+<section class="events-section">
+    <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center
+                    flex-wrap gap-3 mb-5">
+
+            <div>
+                <span class="section-label">GET IN THE ACTION</span>
+
+                <h2 class="section-title">
+                    Explore Our <span>Events</span>
+                </h2>
+
+                <p class="section-description">
+                    Find your next challenge and make every moment count.
+                </p>
+            </div>
+
+            <a href="@Url.Action("Events", "Home")"
+               class="btn btn-outline-dark">
+                View All Events →
+            </a>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-md-4">
+                <div class="event-card">
+
+                    <img src="~/images/running-event.jpg"
+                         alt="Athletes participating in a running event" />
+
+                    <div class="event-card-body">
+
+                        <span class="event-category">ATHLETICS</span>
+
+                        <h4>Running Events</h4>
+
+                        <p>
+                            Challenge yourself, improve your fitness
+                            and experience the excitement of racing.
+                        </p>
+
+                        <a href="@Url.Action("Register", "Home")">
+                            Enrol Now →
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="event-card">
+
+                    <img src="~/images/cycling-event.jpg"
+                         alt="Cyclists competing in a cycling race" />
+
+                    <div class="event-card-body">
+
+                        <span class="event-category">CYCLING</span>
+
+                        <h4>Cycling Events</h4>
+
+                        <p>
+                            Push your limits and experience the
+                            thrill of competitive cycling.
+                        </p>
+
+                        <a href="@Url.Action("Register", "Home")">
+                            Enrol Now →
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="event-card">
+
+                    <img src="~/images/sports-event.jpg"
+                         alt="Athletes taking part in a sporting competition" />
+
+                    <div class="event-card-body">
+
+                        <span class="event-category">SPORTS</span>
+
+                        <h4>Sports Competitions</h4>
+
+                        <p>
+                            Take part in exciting sporting
+                            competitions and show your skills.
+                        </p>
+
+                        <a href="@Url.Action("Register", "Home")">
+                            Enrol Now →
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- HOW IT WORKS -->
+<section class="how-section">
+    <div class="container">
+
+        <div class="text-center mb-5">
+            <span class="section-label">GET STARTED</span>
+
+            <h2 class="section-title">
+                Your RaceDay Journey
+            </h2>
+
+            <p class="section-description">
+                Getting involved is simple. Follow these three steps.
+            </p>
+        </div>
+
+        <div class="row g-4 text-center">
+
+            <div class="col-md-4">
+                <div class="step-card">
+                    <div class="step-number">01</div>
+                    <h4>Create Your Account</h4>
+                    <p>
+                        Register your details and become part
+                        of the RaceDay community.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="step-card">
+                    <div class="step-number">02</div>
+                    <h4>Choose Your Event</h4>
+                    <p>
+                        Explore available events and select
+                        the competition you want to join.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="step-card">
+                    <div class="step-number">03</div>
+                    <h4>Complete Enrolment</h4>
+                    <p>
+                        Submit your enrolment and track your
+                        registration status.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- CALL TO ACTION -->
+<section class="cta-section">
+    <div class="container text-center">
+
+        <span class="section-label">YOUR NEXT CHALLENGE STARTS HERE</span>
+
+        <h2>
+            READY TO MAKE YOUR <span>MOVE?</span>
+        </h2>
+
+        <p>
+            Don't just watch the action. Be part of it.
+            Register today and experience RaceDay.
+        </p>
+
+        <a href="@Url.Action("Register", "Home")"
+           class="btn btn-light btn-lg cta-button">
+            Join RaceDay Today →
+        </a>
+
+    </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="raceday-footer">
+    <div class="container">
+
+        <div class="row g-4">
+
+            <div class="col-lg-5">
+
+                <h3 class="footer-brand">
+                    RACE<span>DAY</span>
+                </h3>
+
+                <p>
+                    Bringing people together through sports,
+                    competitions and unforgettable events.
+                </p>
+
+            </div>
+
+            <div class="col-md-4 col-lg-3">
+
+                <h5>Quick Links</h5>
+
+                <ul>
+                    <li><a href="@Url.Action("Index", "Home")">Home</a></li>
+                    <li><a href="@Url.Action("About", "Home")">About Us</a></li>
+                    <li><a href="@Url.Action("Events", "Home")">Previous Events</a></li>
+                    <li><a href="@Url.Action("Contact", "Home")">Contact</a></li>
+                </ul>
+
+            </div>
+
+            <div class="col-md-8 col-lg-4">
+
+                <h5>Get Started</h5>
+
+                <p>
+                    Ready to participate in your next sporting event?
+                </p>
+
+                <a href="@Url.Action("Register", "Home")"
+                   class="btn btn-raceday">
+                    Register Now →
+                </a>
+
+            </div>
+
+        </div>
+
+        <hr />
+
+        <div class="footer-bottom">
+            <p>
+                &copy; @DateTime.Now.Year RaceDay.
+                All Rights Reserved.
+            </p>
+        </div>
+
+    </div>
+</footer>

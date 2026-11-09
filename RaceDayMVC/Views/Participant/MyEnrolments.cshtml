@@ -1,0 +1,2 @@
+@model List<RaceDayMVC.Models.EnrolmentDto>
+@{ViewData["Title"]="My enrolments";}<h1>My enrolments</h1><div class="table-responsive"><table class="table table-striped"><thead><tr><th>Entry</th><th>Event</th><th>Date</th><th>Category</th><th>Status</th></tr></thead><tbody>@foreach(var e in Model){<tr><td>#@e.UniqueId</td><td>@e.EventName</td><td>@e.EventDate.ToString("dd MMM yyyy HH:mm")</td><td>@e.CategoryName</td><td>@e.Status</td></tr>}</tbody></table>@if(!Model.Any()){<p>You haven't enrolled in an event yet.</p>}</div>

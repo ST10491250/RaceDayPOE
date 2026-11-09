@@ -1,0 +1,2 @@
+@model RaceDayMVC.Models.CreateEventViewModel
+@{ViewData["Title"]="Edit event";}<h1>Edit event</h1><div class="form-panel"><form asp-action="EditEvent" asp-route-id="@ViewBag.EventId" method="post"><partial name="_EventFields" model="Model" /><button class="btn btn-primary" type="submit">Save changes</button> <a asp-action="Events" class="btn btn-outline-dark">Cancel</a></form></div>

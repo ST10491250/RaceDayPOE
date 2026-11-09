@@ -1,0 +1,150 @@
+@model RaceDayMVC.Models.LoginDto
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+@Html.Partial("_navigations")
+
+<section class="auth-section">
+    <div class="container">
+
+        <div class="auth-card">
+
+            <div class="auth-heading">
+                <div class="auth-icon">
+                    <i class="bi bi-person-circle"></i>
+                </div>
+
+                <span class="section-label">WELCOME BACK</span>
+                <h2>Login to <span>RaceDay</span></h2>
+
+                <p>Access your RaceDay account.</p>
+            </div>
+
+            @if (TempData["Success"] != null)
+            {
+                <div class="alert alert-success">
+                    @TempData["Success"]
+                </div>
+            }
+
+            <form asp-action="Login" method="post">
+
+                @Html.AntiForgeryToken()
+
+                <div asp-validation-summary="ModelOnly"
+                     class="text-danger mb-3">
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Email" class="form-label">
+                        Email Address
+                    </label>
+
+                    <input asp-for="Email"
+                           class="form-control"
+                           placeholder="Enter your email" />
+
+                    <span asp-validation-for="Email"
+                          class="text-danger"></span>
+                </div>
+
+                <div class="mb-4">
+                    <label asp-for="Password" class="form-label">
+                        Password
+                    </label>
+
+                    <input asp-for="Password"
+                           type="password"
+                           class="form-control"
+                           placeholder="Enter your password" />
+
+                    <span asp-validation-for="Password"
+                          class="text-danger"></span>
+                </div>
+
+                <button type="submit"
+                        class="btn btn-raceday w-100">
+                    Login →
+                </button>
+
+            </form>
+
+            <div class="auth-footer">
+                <p>
+                    Don't have an account?
+                    <a asp-action="Register">Register here</a>
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="raceday-footer">
+    <div class="container">
+
+        <div class="row g-4">
+
+            <div class="col-lg-5">
+
+                <h3 class="footer-brand">
+                    RACE<span>DAY</span>
+                </h3>
+
+                <p>
+                    Bringing people together through sports,
+                    competitions and unforgettable events.
+                </p>
+
+            </div>
+
+            <div class="col-md-4 col-lg-3">
+
+                <h5>Quick Links</h5>
+
+                <ul>
+                    <li><a href="@Url.Action("Index", "Home")">Home</a></li>
+                    <li><a href="@Url.Action("About", "Home")">About Us</a></li>
+                    <li><a href="@Url.Action("Events", "Home")">Previous Events</a></li>
+                    <li><a href="@Url.Action("Contact", "Home")">Contact</a></li>
+                </ul>
+
+            </div>
+
+            <div class="col-md-8 col-lg-4">
+
+                <h5>Get Started</h5>
+
+                <p>
+                    Ready to participate in your next sporting event?
+                </p>
+
+                <a href="@Url.Action("Register", "Home")"
+                   class="btn btn-raceday">
+                    Register Now →
+                </a>
+
+            </div>
+
+        </div>
+
+        <hr />
+
+        <div class="footer-bottom">
+            <p>
+                &copy; @DateTime.Now.Year RaceDay.
+                All Rights Reserved.
+            </p>
+        </div>
+
+    </div>
+</footer>
+
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

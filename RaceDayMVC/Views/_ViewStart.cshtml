@@ -1,0 +1,1 @@
+@{ var controller=ViewContext.RouteData.Values["controller"]?.ToString(); Layout=controller is "Organiser" or "Participant" or "Account" ? "_DashboardLayout" : "_Layout"; }
